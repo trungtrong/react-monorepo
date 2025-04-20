@@ -1,11 +1,7 @@
-import NxWelcome from './nx-welcome';
+import { Products } from '@react-monorepo/products';
 
 export function App() {
-  return (
-    <div>
-      <NxWelcome title="@react-monorepo/inventory" />
-    </div>
-  );
+  return <Products />;
 }
 
 export default App;
