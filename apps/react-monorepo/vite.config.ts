@@ -5,14 +5,15 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(() => ({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/react-monorepo',
-  server: {
-    port: 4200,
-    host: 'localhost',
-  },
-  preview: {
-    port: 4300,
-    host: 'localhost',
-  },
+  envPrefix: 'ENV_',
+  // server: {
+  //   port: 4200,
+  //   host: 'localhost',
+  // },
+  // preview: {
+  //   port: 4300,
+  //   host: 'localhost',
+  // },
   plugins: [react()],
   // Uncomment this if you are using workers.
   // worker: {

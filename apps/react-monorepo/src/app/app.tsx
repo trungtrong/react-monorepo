@@ -3,9 +3,11 @@ import { Route, Routes } from 'react-router-dom';
 // importing the component from the library
 import { Products } from '@react-monorepo/products';
 import { Orders } from '@react-monorepo/orders';
+import environment from '../environments';
 
 function Home() {
-  return <h1>Welcome react-store</h1>;
+  console.log(environment);
+  return <h1>Welcome react-store { environment.ENV_NAME }</h1>;
 }
 export function App() {
   return (

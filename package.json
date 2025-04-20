@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:react-monorepo": "npx nx serve react-monorepo",
-    "build:react-monorepo": "nx run react-monorepo:build"
+    "start:react-monorepo": "npx nx serve react-monorepo --mode _local --port=3000",
+    "build:react-monorepo:dev": "cross-env NODE_OPTIONS=--max-old-space-size=2048 tsc && nx run react-monorepo:build --mode dev"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +40,7 @@
     "@vitest/ui": "^3.0.0",
     "autoprefixer": "10.4.13",
     "babel-jest": "^29.7.0",
+    "cross-env": "^7.0.3",
     "cypress": "^14.2.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
