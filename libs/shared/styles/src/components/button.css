@@ -1,0 +1,10 @@
+button {
+    padding-block: 0;
+    padding-inline: 0;
+    border-width: 0;
+    background-color: transparent;
+}
+
+.button-red {
+  background-color: red;
+}

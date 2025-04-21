@@ -7,7 +7,7 @@ import environment from '../environments';
 
 function Home() {
   console.log(environment);
-  return <h1 className='bg-primary-50 m-1px'>Welcome react-store { environment.ENV_NAME }</h1>;
+  return <h1 className='bg-primary-100 m-0.5'>Welcome react-store { environment.ENV_NAME }</h1>;
 }
 export function App() {
   return (
