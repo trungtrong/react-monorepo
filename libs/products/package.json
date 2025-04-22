@@ -13,7 +13,7 @@
   },
   "nx": {
     "projectType": "library",
-    "sourceRoot": "libs/products",
+    "sourceRoot": "libs/products/src",
     "tags": [
       "type:feature",
       "scope:products"

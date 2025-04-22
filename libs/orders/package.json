@@ -13,7 +13,7 @@
   },
   "nx": {
     "projectType": "library",
-    "sourceRoot": "libs/orders",
+    "sourceRoot": "libs/orders/src",
     "tags": [
       "type:feature",
       "scope:orders"

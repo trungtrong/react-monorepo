@@ -8,8 +8,10 @@
     "sourceRoot": "apps/react-monorepo/src",
     "targets": {
       "build": {
-        "executor": "@nx/web:webpack",
+        "executor": "@nx/vite:build",
         "options": {
+          "outputPath": "dist/apps/react-monorepo",
+          "configFile": "apps/react-monorepo/vite.config.ts",
           "postcssConfig": "apps/react-monorepo/postcss.config.js"
         }
       }
