@@ -26,6 +26,12 @@
         },
         {
             "path": "./libs/shared/styles"
+        },
+        {
+            "path": "./libs/shared/core"
+        },
+        {
+            "path": "./libs/shared/utils"
         }
     ]
 }

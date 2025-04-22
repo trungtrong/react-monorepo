@@ -30,14 +30,11 @@ export default [
                         },
                         {
                             sourceTag: 'type:ui',
-                            onlyDependOnLibsWithTags: [
-                                'type:ui',
-                                'type:util',
-                            ],
+                            onlyDependOnLibsWithTags: ['type:ui', 'type:util'],
                         },
                         {
-                          "sourceTag": "type:util",
-                          "onlyDependOnLibsWithTags": ["type:util"]
+                            sourceTag: 'type:util',
+                            onlyDependOnLibsWithTags: ['type:util'],
                         },
                         {
                             sourceTag: 'scope:orders',
