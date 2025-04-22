@@ -4,6 +4,8 @@
   "private": true,
   "nx": {
     "name": "react-monorepo",
+    "projectType": "application",
+    "sourceRoot": "apps/react-monorepo/src",
     "targets": {
       "build": {
         "executor": "@nx/web:webpack",

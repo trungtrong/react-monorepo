@@ -12,6 +12,11 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "tags": ["type:feature", "scope:products"]
+    "projectType": "library",
+    "sourceRoot": "libs/products",
+    "tags": [
+      "type:feature",
+      "scope:products"
+    ]
   }
 }

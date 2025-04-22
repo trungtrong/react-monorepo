@@ -1,9 +1,21 @@
 import { Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
 
-// importing the component from the library
-// import { Products } from '@react-monorepo/products';
-import { Orders } from '@react-monorepo/orders';
+
 import environment from '../environments';
+
+/*
+TODO: Fix Absolute import
+- We cannot use import "@react-monorepo/"
++ it breaks detecting Dependencies when we import 2 libs in the same file.
+// import { Orders } from '@react-monorepo/orders';
+// import { Products } from '@react-monorepo/products';
+*/
+
+// eslint-disable-next-line @nx/enforce-module-boundaries
+const Products = lazy(() => import('../../../../libs/products/src/lib/products'));
+// eslint-disable-next-line @nx/enforce-module-boundaries
+const Orders = lazy(() => import('../../../../libs/orders/src/lib/orders'));
 
 function Home() {
   console.log(environment);
@@ -13,7 +25,7 @@ export function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />}></Route>
-      {/* <Route path="/products" element={<Products />}></Route> */}
+      <Route path="/products" element={<Products />}></Route>
       <Route path="/orders" element={<Orders />}></Route>
     </Routes>
   );
