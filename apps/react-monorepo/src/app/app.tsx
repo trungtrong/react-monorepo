@@ -3,9 +3,9 @@ import { lazy } from 'react';
 // const environment = require('../../../../libs/shared/core/src/environments');
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import environment from '../../../../libs/shared/core/src/environments';
-
 // eslint-disable-next-line @nx/enforce-module-boundaries
-
+import { AppInitializer } from '../../../../libs/shared/core/src/public_api';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 /*
 TODO: Fix Absolute import
 - We cannot use import "@react-monorepo/"
@@ -20,17 +20,23 @@ const Products = lazy(() => import('../../../../libs/products/src/lib/products')
 const Orders = lazy(() => import('../../../../libs/orders/src/lib/orders'));
 
 function Home() {
-  console.log(environment);
-  return <h1 className='bg-primary-100 m-0.5'>Welcome react-store { environment.ENV_NAME }</h1>;
+    console.log(environment);
+    return (
+        <h1 className="bg-primary-100 m-0.5">
+            Welcome react-store {environment.ENV_NAME}
+        </h1>
+    );
 }
 export function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/products" element={<Products />}></Route>
-      <Route path="/orders" element={<Orders />}></Route>
-    </Routes>
-  );
+    return (
+        <AppInitializer>
+            <Routes>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/products" element={<Products />}></Route>
+                <Route path="/orders" element={<Orders />}></Route>
+            </Routes>
+        </AppInitializer>
+    );
 }
 
 export default App;

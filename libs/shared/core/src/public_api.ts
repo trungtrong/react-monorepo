@@ -6,3 +6,4 @@ export * from './hooks';
 export * from './injector';
 export * from './services';
 export * from './environments';
+export * from './app-initializer';

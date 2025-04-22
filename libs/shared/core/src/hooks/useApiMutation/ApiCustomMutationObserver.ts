@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { isEmpty } from 'lodash-es';
 import {
     catchError,

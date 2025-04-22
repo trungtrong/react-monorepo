@@ -29,9 +29,11 @@
     },
     "private": true,
     "dependencies": {
+        "lodash-es": "^4.17.21",
         "react": "19.0.0",
         "react-dom": "19.0.0",
-        "react-router-dom": "^6.29.0"
+        "react-router-dom": "^6.29.0",
+        "rxjs": "^7.8.1"
     },
     "devDependencies": {
         "@babel/core": "^7.14.5",
@@ -53,6 +55,7 @@
         "@testing-library/dom": "10.4.0",
         "@testing-library/react": "16.1.0",
         "@types/jest": "^29.5.12",
+        "@types/lodash-es": "^4.17.12",
         "@types/node": "^20.0.0",
         "@types/react": "19.0.0",
         "@types/react-dom": "19.0.0",
@@ -74,6 +77,7 @@
         "jest-environment-jsdom": "^29.7.0",
         "jiti": "2.4.2",
         "jsdom": "~22.1.0",
+        "json-server": "^0.17.4",
         "nx": "20.8.0",
         "postcss": "8.4.38",
         "prettier": "^2.6.2",

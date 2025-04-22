@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
-
+import { useEffect } from 'react';
 import { ICommonProps } from '../models';
+import useAppInitializer from './useAppInitializer';
 
-const AppInitializerContext = React.createContext({});
-const AppInitializerProvider = AppInitializerContext.Provider;
 
 const AppInitializer = (props: ICommonProps) => {
+  const isInitializer = useAppInitializer();
+
     useEffect(() => {
         // toast.init();
 
@@ -15,9 +15,9 @@ const AppInitializer = (props: ICommonProps) => {
     });
 
     return (
-        <AppInitializerProvider value={{}}>
+        <>
             {props.children}
-        </AppInitializerProvider>
+        </>
     );
 };
 
