@@ -12,6 +12,11 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "tags": ["type:feature", "scope:orders"]
+    "projectType": "library",
+    "sourceRoot": "libs/orders",
+    "tags": [
+      "type:feature",
+      "scope:orders"
+    ]
   }
 }

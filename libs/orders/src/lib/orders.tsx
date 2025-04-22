@@ -1,6 +1,6 @@
 export function Orders() {
   return (
-    <div className="m-3 m-4 m-1">
+    <div className="p-1 m-1px bg-primary-50 truncate button-red">
       <h1>Welcome to Orders!</h1>
     </div>
   );

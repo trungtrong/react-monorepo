@@ -11,6 +11,7 @@ module.exports = {
       __dirname,
       '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
     ),
+    // import tailwind to its libraries and dependencies
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {

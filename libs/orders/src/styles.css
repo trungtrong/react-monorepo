@@ -1,0 +1,7 @@
+/*
+We don't need to import global styles.css from @import "./../../shared/styles/src/styles.css";
+
+- Because Shell app (react-monorepo) is initialized
++ and its styles.css is global css
++ so we can use tailwindCSS and global css in Library
+*/

@@ -2,9 +2,9 @@
 module.exports = {
   darkMode: 'class',
   content: [
-    './apps/**/*.{js,ts,jsx,tsx}',
-    './libs/**/*.{js,ts,jsx,tsx}',
-    './{src,pages,components,app}/**/*.{ts,tsx,html}',
+    './apps/**/*!(*.stories|*.spec).{js,ts,jsx,tsx}',
+    './libs/**/*!(*.stories|*.spec).{js,ts,jsx,tsx}',
+    './{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}',
   ],
   prefix: "",
   theme: {
