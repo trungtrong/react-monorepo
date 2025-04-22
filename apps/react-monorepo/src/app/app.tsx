@@ -1,8 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
+// const environment = require('../../../../libs/shared/core/src/environments');
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import environment from '../../../../libs/shared/core/src/environments';
 
-
-import environment from '../environments';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 
 /*
 TODO: Fix Absolute import

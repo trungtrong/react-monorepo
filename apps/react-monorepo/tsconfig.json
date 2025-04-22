@@ -9,6 +9,9 @@
             "path": "../../libs/products"
         },
         {
+            "path": "../../libs/shared/core"
+        },
+        {
             "path": "./tsconfig.app.json"
         },
         {

@@ -10,5 +10,13 @@
             "default": "./src/index.ts"
         },
         "./package.json": "./package.json"
+    },
+    "nx": {
+      "projectType": "library",
+      "sourceRoot": "libs/shared/core/src",
+      "tags": [
+        "type:util",
+        "scope:shared/core"
+      ]
     }
 }
