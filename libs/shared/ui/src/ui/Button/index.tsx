@@ -1,7 +1,6 @@
 import type { MouseEvent } from 'react';
 import { forwardRef } from 'react';
 
-import styles from './index.module.css';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ICommonProps } from '../../../../core/src/models';
 
@@ -32,24 +31,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
             onClick={handleClick}
             {...rest}
         >
-            {/* <ButtonGlobalStyle $disabled={disabled}/> */}
-            <ButtonContainer
-                $disabled={disabled}
-                className={styles['button-container']}
-                // className={`${styles['button-container']} truncate`}
-                data-disabled={disabled}
-            >
-                {children}
-            </ButtonContainer>
-
-            <ButtonContainer2
-                disabled={disabled}
-                className={styles['button-container']}
-                // className={`${styles['button-container']} truncate`}
-                data-disabled={disabled}
-            >
-                {children}
-            </ButtonContainer2>
+          {children}
         </button>
     );
 });
