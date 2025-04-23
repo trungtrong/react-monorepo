@@ -1,20 +1,25 @@
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { Button } from './../../../shared/ui/src/ui';
+import environment from '../../../../../libs/shared/core/src/environments';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
     useAppDispatch,
     useAppSelector,
     CounterSelector,
     CounterActions,
-} from './../../../shared/store/src/public_api';
+} from './../../../../../libs/shared/store/src/public_api';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { Button } from './../../../../../libs/shared/ui/src/ui';
 
-export function Products() {
+const Home = () => {
     const dispatch = useAppDispatch();
     const count = useAppSelector(CounterSelector.selectCount);
 
     return (
-        <div className="p-1 m-1px bg-primary-50 truncate button-red">
-            <h1>Welcome to Products!</h1>
+        <div>
+            <h1 className="bg-primary-100 m-0.5">
+                Welcome react-store {environment.ENV_NAME}
+            </h1>
+
             <div>
                 <Button
                     aria-label="Decrement value"
@@ -32,6 +37,6 @@ export function Products() {
             </div>
         </div>
     );
-}
+};
 
-export default Products;
+export default Home;

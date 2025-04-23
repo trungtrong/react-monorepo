@@ -19,7 +19,10 @@
         },
         {
             "path": "./tsconfig.spec.json"
-        }
+        },
+        {
+            "path": "../../libs/shared/store"
+        },
     ],
     "extends": "../../tsconfig.base.json"
 }

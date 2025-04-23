@@ -35,6 +35,9 @@
         },
         {
             "path": "./libs/shared/assets"
+        },
+        {
+            "path": "./libs/shared/store"
         }
     ]
 }

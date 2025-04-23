@@ -6,12 +6,15 @@ import {
 } from 'react-router-dom';
 import { ErrorInfo } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
+import { Provider } from 'react-redux';
+
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { AppInitializer } from '../../../../libs/shared/core/src/public_api';
+import { AppInitializer } from '../../../libs/shared/core/src/public_api';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import ErrorBoundaryFallback from '../../../../libs/shared/ui/src/pages/ErrorBoundaryFallback';
-import { AppLayout } from '../layouts';
+import ErrorBoundaryFallback from '../../../libs/shared/ui/src/pages/ErrorBoundaryFallback';
+import { AppLayout } from './layouts';
 // eslint-disable-next-line @nx/enforce-module-boundaries
+import store from '../../../libs/shared/store/src/store';
 
 const AppRouter = createBrowserRouter(
     createRoutesFromElements(
@@ -32,9 +35,11 @@ export function App() {
                 console.error(info);
             }}
         >
-            <AppInitializer>
-                <RouterProvider router={AppRouter} />
-            </AppInitializer>
+            <Provider store={store}>
+                <AppInitializer>
+                    <RouterProvider router={AppRouter} />
+                </AppInitializer>
+            </Provider>
         </ErrorBoundary>
     );
 }

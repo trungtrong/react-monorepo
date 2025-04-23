@@ -1,5 +1,5 @@
 {
-    "name": "@react-monorepo/styles",
+    "name": "@react-monorepo/store",
     "version": "0.0.1",
     "main": "./src/index.ts",
     "types": "./src/index.ts",
@@ -13,9 +13,9 @@
     },
     "nx": {
       "projectType": "library",
-      "sourceRoot": "libs/shared/styles/src",
+      "sourceRoot": "libs/shared/store/src",
       "tags": [
-        "type:ui",
+        "type:data-access",
         "scope:shared"
       ]
     }
