@@ -1,20 +1,18 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { UsersService } from '../services/UsersService';
 import useApiMutation from '../hooks/useApiMutation';
-import { useInject } from '../injector';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { UserStorage } from './../../../utils';
 
 const useAppInitializer = () => {
-    const usersServiceRef = useRef(useInject<UsersService>(UsersService.dependencyName));
 
     const [isInitializer, setIsInitializer] = useState(false);
     //
     const { mutate: getApisInitializedMutate } = useApiMutation({
         mutationFn: () => {
             return Promise.all([
-                usersServiceRef.current.getUserInfo()
+              UsersService.getUserInfo()
             ]);
         },
         onSuccess: ([userInfo]) => {

@@ -9,6 +9,9 @@
             "path": "../../libs/products"
         },
         {
+            "path": "../../libs/shared/ui"
+        },
+        {
             "path": "../../libs/shared/core"
         },
         {

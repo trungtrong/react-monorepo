@@ -1,41 +1,41 @@
-import { Route, Routes } from 'react-router-dom';
-import { lazy } from 'react';
-// const environment = require('../../../../libs/shared/core/src/environments');
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import environment from '../../../../libs/shared/core/src/environments';
+import {
+    createBrowserRouter,
+    createRoutesFromElements,
+    Route,
+    RouterProvider,
+} from 'react-router-dom';
+import { ErrorInfo } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { AppInitializer } from '../../../../libs/shared/core/src/public_api';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-/*
-TODO: Fix Absolute import
-- We cannot use import "@react-monorepo/"
-+ it breaks detecting Dependencies when we import 2 libs in the same file.
-// import { Orders } from '@react-monorepo/orders';
-// import { Products } from '@react-monorepo/products';
-*/
-
+import ErrorBoundaryFallback from '../../../../libs/shared/ui/src/pages/ErrorBoundaryFallback';
+import { AppLayout } from '../layouts';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-const Products = lazy(() => import('../../../../libs/products/src/lib/products'));
-// eslint-disable-next-line @nx/enforce-module-boundaries
-const Orders = lazy(() => import('../../../../libs/orders/src/lib/orders'));
 
-function Home() {
-    console.log(environment);
-    return (
-        <h1 className="bg-primary-100 m-0.5">
-            Welcome react-store {environment.ENV_NAME}
-        </h1>
-    );
-}
+const AppRouter = createBrowserRouter(
+    createRoutesFromElements(
+        <Route
+            path="*"
+            element={<AppLayout />}
+            errorElement={<ErrorBoundaryFallback />}
+        />
+    )
+);
+
 export function App() {
     return (
-        <AppInitializer>
-            <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/products" element={<Products />}></Route>
-                <Route path="/orders" element={<Orders />}></Route>
-            </Routes>
-        </AppInitializer>
+        <ErrorBoundary
+            fallbackRender={() => <ErrorBoundaryFallback />}
+            onError={(error: Error, info: ErrorInfo) => {
+                console.error(error);
+                console.error(info);
+            }}
+        >
+            <AppInitializer>
+                <RouterProvider router={AppRouter} />
+            </AppInitializer>
+        </ErrorBoundary>
     );
 }
 

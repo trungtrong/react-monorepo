@@ -12,6 +12,11 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "tags": ["type:ui", "scope:shared"]
+    "projectType": "library",
+    "sourceRoot": "libs/shared/ui/src",
+    "tags": [
+      "type:ui",
+      "scope:shared"
+    ]
   }
 }
