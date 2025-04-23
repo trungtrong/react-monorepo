@@ -43,11 +43,6 @@ const Layout = ({ isInitializer }: AppLayoutProps) => {
                 <Route path="/products" element={<Products />}></Route>
                 <Route path="/orders" element={<Orders />}></Route>
             </Route>
-
-            {/* <Route path="/" element={<Home />}>
-                <Route path="/products" element={<Products />}></Route>
-                <Route path="/orders" element={<Orders />}></Route>
-            </Route> */}
         </Routes>
     );
 };
