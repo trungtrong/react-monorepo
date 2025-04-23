@@ -12,9 +12,9 @@ TODO: Fix Absolute import
 // import { Products } from '@react-monorepo/products';
 */
 // eslint-disable-next-line @nx/enforce-module-boundaries
-const Products = lazy(
+const ProductsModule = lazy(
     // eslint-disable-next-line @nx/enforce-module-boundaries
-    () => import('../../../../../libs/products/src/lib/products')
+    () => import('../../../../../libs/products/src/lib/products.module')
 );
 // eslint-disable-next-line @nx/enforce-module-boundaries
 const Orders = lazy(() => import('../../../../../libs/orders/src/lib/orders'));
@@ -24,7 +24,7 @@ const View = () => {
         <Routes>
             <Route path="/" element={<Outlet />}>
                 <Route path="/" element={<Home />}></Route>
-                <Route path="/products" element={<Products />}></Route>
+                <Route path="/products" element={<ProductsModule />}></Route>
                 <Route path="/orders" element={<Orders />}></Route>
             </Route>
         </Routes>

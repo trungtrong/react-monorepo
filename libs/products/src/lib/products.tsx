@@ -1,31 +1,33 @@
+import { memo } from 'react';
+
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Button } from './../../../shared/ui/src/ui';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
     useAppDispatch,
     useAppSelector,
-    CounterSelector,
-    CounterActions,
 } from './../../../shared/store/src/public_api';
+import { ProductsSelector } from './store/products-active.selectors';
+import { ProductsActions } from './store/products-active.actions';
 
 export function Products() {
     const dispatch = useAppDispatch();
-    const count = useAppSelector(CounterSelector.selectCount);
+    const productCount = useAppSelector(ProductsSelector.getProductsCount);
 
     return (
         <div className="p-1 m-1px bg-primary-50 truncate button-red">
             <h1>Welcome to Products!</h1>
-            <div>
+            <div className='flex flex-row gap-1'>
                 <Button
-                    aria-label="Decrement value"
-                    onClick={() => dispatch(CounterActions.decrement())}
+                    aria-label="Decrement productCount"
+                    onClick={() => dispatch(ProductsActions.decreaseProductCount())}
                 >
                     Decrease
                 </Button>
-                <span aria-label="Count">{count}</span>
+                <span aria-label="Count">{productCount}</span>
                 <Button
-                    aria-label="Increment value"
-                    onClick={() => dispatch(CounterActions.increment())}
+                    aria-label="Increment productCount"
+                    onClick={() => dispatch(ProductsActions.increaseProductCount())}
                 >
                     Increase
                 </Button>
@@ -34,4 +36,4 @@ export function Products() {
     );
 }
 
-export default Products;
+export default memo(Products);
