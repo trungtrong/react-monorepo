@@ -19,7 +19,18 @@
         "customConditions": ["development"],
         "baseUrl": ".",
         "paths": {
-            "@my-app/styles": ["libs/shared/styles/src/styles.css"]
+            "@projects/react-monorepo/*": ["apps/react-monorepo/src/*"],
+            "@libs/orders/*": ["libs/orders/src/lib/*"],
+            "@libs/products/*": ["libs/products/src/lib/*"],
+            "@libs/shared/assets/*": ["libs/shared/assets/*"],
+            "@libs/shared/core/*": ["libs/shared/core/src/*"],
+            "@libs/shared/store/*": ["libs/shared/store/src/*"],
+            "@libs/shared/styles/*": ["libs/shared/styles/src/*"],
+            "@libs/shared/ui/*": ["libs/shared/ui/src/*"],
+            "@libs/shared/utils/*": ["libs/shared/utils/src/*"]
+        },
+        "tsc-alias": {
+            "resolveFullPaths": true
         }
     }
 }
