@@ -9,6 +9,9 @@
             "path": "../../libs/products"
         },
         {
+            "path": "../../libs/shared/store"
+        },
+        {
             "path": "../../libs/shared/ui"
         },
         {
@@ -19,10 +22,7 @@
         },
         {
             "path": "./tsconfig.spec.json"
-        },
-        {
-            "path": "../../libs/shared/store"
-        },
+        }
     ],
     "extends": "../../tsconfig.base.json"
 }

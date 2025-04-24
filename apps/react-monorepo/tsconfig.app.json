@@ -38,13 +38,13 @@
             "path": "../../libs/products/tsconfig.lib.json"
         },
         {
+            "path": "../../libs/shared/store/tsconfig.lib.json"
+        },
+        {
             "path": "../../libs/shared/ui/tsconfig.lib.json"
         },
         {
             "path": "../../libs/shared/core/tsconfig.lib.json"
-        },
-        {
-            "path": "../../libs/shared/store/tsconfig.lib.json"
         }
     ]
 }

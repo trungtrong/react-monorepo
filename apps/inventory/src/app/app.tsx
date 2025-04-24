@@ -1,7 +1,5 @@
-import { Products } from '@react-monorepo/products';
-
 export function App() {
-  return <Products />;
+  return <div></div>;
 }
 
 export default App;
