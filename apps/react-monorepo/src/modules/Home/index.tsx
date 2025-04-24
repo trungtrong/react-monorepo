@@ -1,14 +1,14 @@
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import environment from '../../../../../libs/shared/core/src/environments';
 // eslint-disable-next-line @nx/enforce-module-boundaries
+import environment from '@libs/shared/core/environments';
 import {
     useAppDispatch,
     useAppSelector,
     CounterSelector,
     CounterActions,
-} from './../../../../../libs/shared/store/src/public_api';
+} from '@libs/shared/store/public_api';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { Button } from './../../../../../libs/shared/ui/src/ui';
+import { Button } from '@libs/shared/ui/ui';
 
 const Home = () => {
     const dispatch = useAppDispatch();

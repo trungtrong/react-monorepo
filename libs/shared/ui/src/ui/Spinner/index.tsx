@@ -1,7 +1,7 @@
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { SvgSpinner } from './../../../../assets/src/svg-icons';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { ICommonProps } from '../../../../core/src/models';
+import { ICommonProps } from '@libs/shared/core/models';
 import classNames from 'classnames';
 import { ElementType, forwardRef, memo, useMemo } from 'react';
 

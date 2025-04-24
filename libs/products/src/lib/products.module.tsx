@@ -2,7 +2,7 @@
 import {
     withReducer,
     AppStateFeatureKeysEnum,
-} from '../../../shared/store/src/public_api';
+} from '@libs/shared/store/public_api';
 import ProductsReducer from './store/products-active.reducer';
 import { Products } from './products';
 

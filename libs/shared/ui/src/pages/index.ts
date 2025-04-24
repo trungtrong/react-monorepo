@@ -1,1 +1,5 @@
-export * from './ErrorBoundaryFallback';
+import ErrorBoundaryFallback from './ErrorBoundaryFallback';
+
+export {
+  ErrorBoundaryFallback
+}

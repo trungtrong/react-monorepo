@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { IProductsState } from './products-active.model';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { AppStateFeatureKeysEnum } from '../../../../shared/store/src/feature-keys.enums';
+import { AppStateFeatureKeysEnum } from '@libs/shared/store/feature-keys.enums';
 
 const initialState: IProductsState = {
   productsCount: 0

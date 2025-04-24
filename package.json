@@ -8,6 +8,8 @@
         "build:react-monorepo:dev": "cross-env NODE_OPTIONS=--max-old-space-size=2048 tsc && nx run react-monorepo:build --mode dev",
         "// - NX WORKSPACE": "nx command",
         "nx:graph": "npx nx graph --watch",
+        "nx:reset": "npx nx reset",
+        "nx:sync": "npx nx sync",
         "// - Mock API": "Mock API",
         "json-server": "json-server --routes routes.json --watch db.json --port 8081",
         "// - TESTING": "Test all modules",
@@ -93,6 +95,7 @@
         "typescript": "~5.7.2",
         "typescript-eslint": "^8.19.0",
         "vite": "^6.0.0",
+        "vite-tsconfig-paths": "^5.1.4",
         "vitest": "^3.0.0"
     },
     "workspaces": [

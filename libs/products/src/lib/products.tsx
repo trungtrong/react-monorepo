@@ -1,12 +1,12 @@
 import { memo } from 'react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { Button } from './../../../shared/ui/src/ui';
+import { Button } from '@libs/shared/ui/ui';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
     useAppDispatch,
     useAppSelector,
-} from './../../../shared/store/src/public_api';
+} from '@libs/shared/store/public_api';
 import { ProductsSelector } from './store/products-active.selectors';
 import { ProductsActions } from './store/products-active.actions';
 

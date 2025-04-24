@@ -1,7 +1,7 @@
 import { memo, Suspense } from 'react';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import useAppInitializer from '../../../../../libs/shared/core/src/app-initializer/useAppInitializer';
+import { useAppInitializer } from '@libs/shared/core/app-initializer';
 import Views from '../Views';
 import Sidebar from '../Sidebar';
 import styles from './index.module.css';

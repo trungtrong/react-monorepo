@@ -9,12 +9,12 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Provider } from 'react-redux';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { AppInitializer } from '../../../libs/shared/core/src/public_api';
+import { AppInitializer } from '@libs/shared/core/app-initializer';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import ErrorBoundaryFallback from '../../../libs/shared/ui/src/pages/ErrorBoundaryFallback';
+import { ErrorBoundaryFallback } from '@libs/shared/ui/pages';
 import { AppLayout } from './layouts';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import store from '../../../libs/shared/store/src/store';
+import store from '@libs/shared/store/store';
 
 const AppRouter = createBrowserRouter(
     createRoutesFromElements(
