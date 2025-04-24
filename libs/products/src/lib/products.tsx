@@ -6,9 +6,9 @@ import { Button } from '@libs/shared/ui/ui';
 import {
     useAppDispatch,
     useAppSelector,
-} from '@libs/shared/store/public_api';
-import { ProductsSelector } from './store/products-active.selectors';
-import { ProductsActions } from './store/products-active.actions';
+} from '@libs/shared/store/index';
+import { ProductsSelector } from '../store/products-active.selectors';
+import { ProductsActions } from '../store/products-active.actions';
 
 export function Products() {
     const dispatch = useAppDispatch();

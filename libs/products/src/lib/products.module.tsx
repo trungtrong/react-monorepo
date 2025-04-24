@@ -2,8 +2,8 @@
 import {
     withReducer,
     AppStateFeatureKeysEnum,
-} from '@libs/shared/store/public_api';
-import ProductsReducer from './store/products-active.reducer';
+} from '@libs/shared/store/index';
+import ProductsReducer from '../store/products-active.reducer';
 import { Products } from './products';
 
 export function ProductsModule() {

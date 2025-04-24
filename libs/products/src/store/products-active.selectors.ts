@@ -5,7 +5,7 @@ import { IProductsState } from './products-active.model';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   RootState
-} from '@libs/shared/store/public_api';
+} from '@libs/shared/store/index';
 
 export class ProductsSelector {
   private static getState = (state: RootState): IProductsState => {

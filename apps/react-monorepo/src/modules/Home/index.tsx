@@ -6,7 +6,7 @@ import {
     useAppSelector,
     CounterSelector,
     CounterActions,
-} from '@libs/shared/store/public_api';
+} from '@libs/shared/store/index';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Button } from '@libs/shared/ui/ui';
 
