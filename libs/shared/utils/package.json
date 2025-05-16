@@ -16,7 +16,7 @@
       "sourceRoot": "libs/shared/utils/src",
       "tags": [
         "type:util",
-        "scope:utils/core"
+        "scope:shared"
       ]
     }
 }
